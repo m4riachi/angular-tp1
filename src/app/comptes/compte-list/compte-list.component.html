@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">RIB</th>
+    <th scope="col">Solde</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let compte of comptes; let i = index">
+    <td>{{ compte.rib }}</td>
+    <td>{{ compte.sold }}</td>
+    <td>
+      <button class="btn btn-sm btn-warning mr-2" (click)="update(compte, i)"><i class="fa fa-pencil"></i></button>
+      <button class="btn btn-sm btn-danger" (click)="delete(compte.rib, i)"><i class="fa fa-trash"></i></button>
+    </td>
+  </tr>
+  </tbody>
+</table>
